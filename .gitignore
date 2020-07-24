@@ -1,0 +1,12 @@
+# Mac files
+.DS_Store
+*/.DS_Store
+
+# phpStorm
+.idea/
+.idea
+
+# vscode
+.history/
+.vscode/
+

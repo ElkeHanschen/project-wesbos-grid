@@ -1,0 +1,251 @@
+/* color: #ffd273; /* orange-yellow */
+/* color: #fee686; /* yellow */
+/* color #fec5e6; /* cotton-candy */
+/* color: #deb5d7; /* pink-lavender */
+/* color: #ef9cda; /* orchid */
+/* color: #bfaee3; /* blue-purple */
+/* color: #582850; /* dark-purple */
+
+body {
+    background: linear-gradient(to right, #fee686, #ef9cda);
+    color: #582850;
+    font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
+}
+
+/* RESETS */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* HEADER */
+
+.header-wrapper {
+    background-color: #ffd273;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-item {
+    color: #fff;
+    display: none;
+    padding: 16px 20px;
+    text-decoration: none;
+}
+
+.nav-item:hover:not(.brand-logo) {
+    background-color: #bfaee3
+}
+
+.navbar.open .nav-item,
+.brand-logo {
+    display: block;
+}
+
+button.nav-toggle {
+    background-color: #ffd273;
+    border: 0;
+    color: #582850;
+    outline: none;
+    padding: 0;
+}
+
+.nav-toggle {
+    cursor: pointer;
+    height: 32px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 32px;
+}
+
+.solarsystem-logo,
+.sandwich-logo {
+    height: 30px;
+}
+
+@media (min-width: 768px) {
+    .nav-item {
+        align-items: center;
+        display: inline-flex;
+    }
+    .navbar {
+        align-items: stretch;
+        display: flex;
+    }
+    .nav-toggle {
+        display: none;
+    }
+}
+
+/* MAIN START */
+
+.main-wrapper {
+    padding: 0 20px;
+    z-index: 1;
+}
+
+.section-wrapper {
+    padding: 16px 24px;
+}
+
+a.link-style {
+    text-decoration: underline #582850;
+}
+
+a.link-style:hover {
+    background-color: #bfaee3;
+    color: #fff;
+    text-decoration: underline #000;
+}
+
+@media (min-width: 768px) {
+    .main-wrapper {
+        padding-left: calc((100vw - 904px) / 2);
+        padding-right: calc((100vw - 904px) / 2);
+    }
+    .section-wrapper {
+        padding: 16px 24px;
+    }
+}
+
+/* MAIN END */
+
+/* FOOTER START */
+
+.footer-content {
+    background-color: #ffd273;
+    font-size: 12px;
+    padding: 16px 20px;
+}
+
+.footer-top-link {
+    color: #582850;
+    text-align: right;
+}
+
+a.scroll-to-top {
+    padding: 10px;
+    position: relative;
+    top: -10px;
+    right: 10px;
+}
+
+/* FOOTER END */
+
+/* MASONRY START */
+
+.gallery {
+    width: 100%;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.7);
+    bottom: 0;
+    display: none;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 2;
+}
+.overlay.open {
+    align-items: center;
+    display: grid;
+    justify-items: center;
+    padding: 50px;
+}
+.overlay-inner {
+    background: #fff;
+    padding: 20px;
+}
+.overlay img {
+    width: 100%;
+}
+.close {
+    background: none;
+    border: 0;
+    color: #000;
+}
+
+.item {
+    padding: 16px;
+}
+.item img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+.item__overlay {
+    background: rgba(254, 197, 230, .7);
+}
+.item__overlay .item-view {
+    background: rgba(88, 40, 80, .7);
+    border: 1px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    padding: 8px;
+}
+
+@media (min-width: 768px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 100px);
+        grid-auto-rows: 100px;
+        grid-auto-flow: dense;
+    }
+    .overlay-inner {
+        width: 700px;
+    }
+    .item {
+        display: grid;
+        grid-template-columns: 1;
+        grid-template-rows: 1;
+        overflow: hidden;
+    }
+    .item img {
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
+    }
+    .item__overlay {
+        align-items: center;
+        display: grid;
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
+        justify-items: center;
+        position: relative;
+        transition: 0.2s;
+        transform: translateY(100%);
+    }
+    .item:hover .item__overlay {
+        transform: translateY(0);
+    }
+    .item.v2 {
+        grid-row: span 2;
+    }
+    .item.v3 {
+        grid-row: span 3;
+    }
+    .item.v4 {
+        grid-row: span 4;
+    }
+    .item.h2 {
+        grid-column: span 2;
+    }
+    .item.h3 {
+        grid-column: span 3;
+    }
+    .item.h4 {
+        grid-column: span 4;
+    }
+}
+
+/* MASONRY END */
