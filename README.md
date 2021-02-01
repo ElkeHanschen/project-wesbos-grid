@@ -1,10 +1,9 @@
-# Image Gallery, based on video 20 of Wes Bos CSS Grid course
+# Image Gallery, based on video #20 of Wes Bos CSS Grid course
 
 ### What is this about?
 
 - the project is based on coding along to video number 20 of Wes Bos CSS Grid course (for which you can sign up for free)
 - HTML, CSS, JavaScript and here obviously CSS Grid
-- no build workflow (yet)
 - as I've started to tweak the original Wes Bos code, mine looks different already
 - the (my) main navigation has no functionality, it's in there for future, possible improvements
 
